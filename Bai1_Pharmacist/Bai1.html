@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> Quản lý dược sĩ</title>
 </head>
+<p id ="txxt"></p>
 <body>
 
 <script>
@@ -46,13 +47,13 @@
 
     // let pharmacist = new Pharmacist(1,'hieu',26,'Hà Nam');
     let PharmacistManager = function () {
-        let array = new Array();
+          this.array = new Array();
         this.addArrPharma = function (ph) {
-            this.array.push(ph.getId(),ph.getName(),ph.getAge(),ph.getAddress());
+            this.array.push(ph);
         }
         this.displayPharmacist = function () {
             for (let i = 0; i < this.array.length; i++) {
-                alert("Id"+this.array[i].id +"name"+this.array[i].name +"Age"+this.array[i].age+"Addre"+this.array[i].address);
+                alert("Id  :"+this.array[i].id +"name  :"+this.array[i].name +"Age  :"+this.array[i].age+"Addre :"+this.array[i].address);
             }
         }
 
@@ -68,8 +69,8 @@
     lsitPharma.addArrPharma(pharma1);
     lsitPharma.addArrPharma(pharma2);
     lsitPharma.addArrPharma(pharma3);
-    lsitPharma.displayPharmacist();
-
+     lsitPharma.displayPharmacist();
+  ///document.getElementById("txxt").value =arry2;
 
 
 </script>
