@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rat_Cat</title>
+</head>
+<body>
+<script>
+    let Rat = function (name,weight,speed,status) {
+        this.name =name;
+        this.weith = weight;
+        this.speed =speed;
+        this.status =status;
+        this.getSpeak = function(){
+            alert("chit chit");
+
+        };
+    }
+ let Cat = function (name,weight,maxspeed){
+        this.name =name;
+        this.weight =weight;
+        this.maxSpeed =maxspeed;
+        this.getAction =function(){
+            alert("mèo mèo ,chuột đâu");
+        }
+        this.CatRat =function (r) {
+            let count =0;
+
+
+          if(maxspeed >r.speed){
+                count++;
+                alert("mèo bắt được"+count +"con chuột");
+            }
+        }
+        this.CateatRat =function (r) {
+                if(r.status ===true){
+                    this.weight++;
+                }else{
+                    this.weight;
+                }
+        }
+ }
+let rat = new Rat("thành",5,20,true);
+    let cat =new Cat("tom",15,30);
+    rat.getSpeak();
+    cat.getAction();
+    cat.CatRat(rat);
+   cat.CateatRat(rat);
+   alert("weight"+cat.weight);
+
+</script>
+</body>
+</html>
