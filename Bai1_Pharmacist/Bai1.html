@@ -48,11 +48,14 @@
     // let pharmacist = new Pharmacist(1,'hieu',26,'Hà Nam');
     let PharmacistManager = function () {
           this.array = new Array();
-        this.addArrPharma = function (ph) {
-            this.array.push(ph);
+        this.addArrPharma = function (pharmacist) {
+            this.array.push(pharmacist);
         }
         this.displayPharmacist = function () {
+            console.log(this.array);
+
             for (let i = 0; i < this.array.length; i++) {
+                console.log(this.array[i]);
                 alert("Id  :"+this.array[i].id +"name  :"+this.array[i].name +"Age  :"+this.array[i].age+"Addre :"+this.array[i].address);
             }
         }
